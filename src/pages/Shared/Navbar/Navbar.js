@@ -23,7 +23,7 @@ const Navbar = () => {
         <li><a>Item 3</a></li>
       </ul>
     </div>
-    <a class="btn btn-ghost text-green-600 normal-case text-3xl">Hammer Drill M.F.C (L.T.D)</a>
+    <a class="btn btn-ghost text-teal-600 normal-case lg:text-3xl md:text-2xl font-bold">Hammer Drill M.F.C (L.T.D)</a>
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal p-0">
@@ -35,7 +35,7 @@ const Navbar = () => {
     </ul>
   </div>
   <div class="navbar-end">
-    <a class="btn">Get started</a>
+    <a class="btn">Get</a>
   </div>
 </div>
     );
