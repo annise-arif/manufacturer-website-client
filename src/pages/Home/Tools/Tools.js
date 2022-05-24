@@ -64,7 +64,7 @@ const Tools = () => {
     return (
         <div>
         <h1 className='text-teal-600 text-4xl text-center font-bold mt-16'>Tools</h1>
-            <div className='inline-grid lg:grid-cols-3 md:grid-cols-2 gap-10 w-full mx-auto mt-8'>
+            <div className='lg:px-12 md:px-8 sm:px-6 inline-grid lg:grid-cols-3 md:grid-cols-2 gap-10 w-full mx-auto mt-8'>
                 {
                     services.map(service => <Tool
                     key={service._id}
