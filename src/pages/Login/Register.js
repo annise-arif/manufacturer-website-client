@@ -1,10 +1,9 @@
-import React, { useRef } from "react";
-import auth from "../../Firebase.init";
+import React from "react";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
-import SocialLogin from "./SocialLogin/SocialLogin";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import auth from "../../Firebase.init";
 import Loading from "../Shared/Loading/Loading";
-import { Button, Form } from "react-bootstrap";
+import SocialLogin from "./SocialLogin/SocialLogin";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -39,9 +38,9 @@ const Register = () => {
     navigate("/login");
   };
   return (
-    <div class="card w-96 bg-base-100 shadow-xl text-center my-20 mx-auto">
+    <div className="card w-96 bg-base-100 shadow-xl text-center my-20 mx-auto">
       <h1 className="text-teal-700 font-bold">Please Register</h1>
-      <div class="card-body">
+      <div className="card-body">
         <form onSubmit={handleSubmit}>
           <input
             type="email"
@@ -78,7 +77,7 @@ const Register = () => {
         </p>
       </div>
       <div className="my-5">
-        <div class="divider">OR</div>
+        <div className="divider">OR</div>
         <SocialLogin></SocialLogin>
       </div>
     </div>

@@ -13,14 +13,14 @@ const Navbar = () => {
   };
   return (
     <header>
-      <div class="navbar bg-teal-200">
-        <div class="navbar-start">
-          <a class="btn btn-ghost text-teal-600 normal-case lg:text-3xl md:text-2xl font-bold">
+      <div className="navbar bg-teal-200">
+        <div className="navbar-start">
+          <a className="btn btn-ghost text-teal-600 normal-case lg:text-3xl md:text-2xl font-bold">
             Hammer Drill M.F.C (L.T.D)
           </a>
         </div>
-        <div class="navbar-center hidden lg:flex">
-          <ul class="menu menu-horizontal p-0">
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal p-0">
             <li>
               <Link to="/"></Link>
             </li>
@@ -34,14 +34,14 @@ const Navbar = () => {
                   <Link to="/home">About</Link>
                 </li>
                 <li>
-                  <Link to="/home">Home</Link>
+                  <Link to="/dashboard">Dashboard</Link>
                 </li>
               </>
             )}
           </ul>
         </div>
-        <div class="navbar-end">
-          <ul class="menu menu-horizontal p-0">
+        <div className="navbar-end">
+          <ul className="menu menu-horizontal p-0">
             {user ? (
               <div>
                 <button

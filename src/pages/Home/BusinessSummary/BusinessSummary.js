@@ -10,12 +10,12 @@ const BusinessSummary = () => {
         <span className="">TRY TO UNDERSTAND USERS EXPECTATION</span>
       </div>
       <div className="inline-grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 w-full mx-auto mt-8">
-        <div class="card w-96 bg-base-100">
-          <figure class="px-10 pt-10">
-            <i class="fa-solid fa-flag-usa text-3xl text-teal-600"></i>
+        <div className="card w-96 bg-base-100">
+          <figure className="px-10 pt-10">
+            <i className="fa-solid fa-flag-usa text-3xl text-teal-600"></i>
           </figure>
-          <div class="card-body items-center text-center">
-            <h2 class="card-title font-bold lg:text-4xl md:text-3xl sm:text-2xl">
+          <div className="card-body items-center text-center">
+            <h2 className="card-title font-bold lg:text-4xl md:text-3xl sm:text-2xl">
               72
             </h2>
             <p>
@@ -23,12 +23,12 @@ const BusinessSummary = () => {
             </p>
           </div>
         </div>
-        <div class="card w-96 bg-base-100">
-          <figure class="px-10 pt-10">
-            <i class="fa-solid fa-computer text-3xl text-teal-600"></i>
+        <div className="card w-96 bg-base-100">
+          <figure className="px-10 pt-10">
+            <i className="fa-solid fa-computer text-3xl text-teal-600"></i>
           </figure>
-          <div class="card-body items-center text-center">
-            <h2 class="card-title font-bold lg:text-4xl md:text-3xl sm:text-2xl">
+          <div className="card-body items-center text-center">
+            <h2 className="card-title font-bold lg:text-4xl md:text-3xl sm:text-2xl">
               535+
             </h2>
             <p>
@@ -38,12 +38,12 @@ const BusinessSummary = () => {
             </p>
           </div>
         </div>
-        <div class="card w-96 bg-base-100">
-          <figure class="px-10 pt-10">
-            <i class="fa-solid fa-people-group text-3xl text-teal-600"></i>
+        <div className="card w-96 bg-base-100">
+          <figure className="px-10 pt-10">
+            <i className="fa-solid fa-people-group text-3xl text-teal-600"></i>
           </figure>
-          <div class="card-body items-center text-center">
-            <h2 class="card-title font-bold lg:text-4xl md:text-3xl sm:text-2xl">
+          <div className="card-body items-center text-center">
+            <h2 className="card-title font-bold lg:text-4xl md:text-3xl sm:text-2xl">
               283+
             </h2>
             <p>
@@ -51,12 +51,12 @@ const BusinessSummary = () => {
             </p>
           </div>
         </div>
-        <div class="card w-96 bg-base-100">
-          <figure class="px-10 pt-10">
-            <i class="fa-solid fa-thumbs-up text-3xl text-teal-600"></i>
+        <div className="card w-96 bg-base-100">
+          <figure className="px-10 pt-10">
+            <i className="fa-solid fa-thumbs-up text-3xl text-teal-600"></i>
           </figure>
-          <div class="card-body items-center text-center">
-            <h2 class="card-title font-bold lg:text-4xl md:text-3xl sm:text-2xl">
+          <div className="card-body items-center text-center">
+            <h2 className="card-title font-bold lg:text-4xl md:text-3xl sm:text-2xl">
               435+
             </h2>
             <p>
@@ -68,12 +68,14 @@ const BusinessSummary = () => {
 
       <div className="d-flex bg-light shadow-lg mx-auto mt-12 w-1/2 p-4">
         <div className="content">
-          <h1 className="text-teal-600 lg:text-2xl font-bold  pt-6 pb-2">Have any question about us get a <br /> products request?</h1>
+          <h1 className="text-teal-600 lg:text-2xl font-bold  pt-6 pb-2">
+            Have any question about us get a <br /> products request?
+          </h1>
           <span>Don't hesitate to contact us</span>
         </div>
-        <div class="card-actions justify-end">
-          <button class="btn bg-teal-600 btn-sm">Request For Quote</button>
-          <button class="btn bg-black btn-sm">Contact Us</button>
+        <div className="card-actions justify-end">
+          <button className="btn bg-teal-600 btn-sm">Request For Quote</button>
+          <button className="btn bg-black btn-sm">Contact Us</button>
         </div>
       </div>
     </div>
