@@ -7,7 +7,6 @@ import Loading from "../Shared/Loading/Loading";
 import { Button, Form } from "react-bootstrap";
 
 const Register = () => {
-  
   const navigate = useNavigate();
   const location = useLocation();
   let from = location?.state?.from?.pathname || "/";
@@ -36,18 +35,50 @@ const Register = () => {
       createUserWithEmailAndPassword(email, password);
     }
   };
+  const navigateRegister = () => {
+    navigate("/login");
+  };
   return (
     <div class="card w-96 bg-base-100 shadow-xl text-center my-20 mx-auto">
-    <h1 className="text-teal-700 font-bold">Please Register</h1>
+      <h1 className="text-teal-700 font-bold">Please Register</h1>
       <div class="card-body">
-          <form onSubmit={handleSubmit}>
-              <input type="email" name="email" id="" placeholder="Example@gmail.com" className="border rounded-md p-2"/>
-              <input type="password" name="password" id="" placeholder="password" className="border rounded-md p-2 my-4"/>
-              <p><input type="submit" value="Register" className="btn btn-sm"/></p>
-              
-          </form>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            name="email"
+            id=""
+            placeholder="Example@gmail.com"
+            className="border rounded-md p-2"
+          />
+          <input
+            type="password"
+            name="password"
+            id=""
+            placeholder="password"
+            className="border rounded-md p-2 my-4"
+          />
+          <p>
+            <input
+              type="submit"
+              value="Register"
+              className="btn btn-sm bg-teal-500"
+            />
+          </p>
+          <p className="text-red-500">{errorElement}</p>
+        </form>
+        <p className="mt-4">
+          Have an account Hammer Drill M.F.C ?{" "}
+          <Link
+            to="/login"
+            className="text-primary text-decoration-none"
+            onClick={navigateRegister}
+          >
+            Please Login
+          </Link>
+        </p>
       </div>
       <div className="my-5">
+        <div class="divider">OR</div>
         <SocialLogin></SocialLogin>
       </div>
     </div>
