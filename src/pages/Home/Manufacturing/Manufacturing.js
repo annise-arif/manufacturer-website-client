@@ -2,7 +2,9 @@ import React from "react";
 
 const Manufacturing = () => {
   return (
-    <div class="hero min-h-screen">
+   <div>
+   <h2 className="text-2xl text-teal-500 text-center mt-20 font-bold">Rotor Testing</h2>
+      <div class="hero min-h-screen">
       <div class="hero-content flex-col lg:flex-row-reverse">
         <img
           src="https://i.ibb.co/fGTqvg5/heroimg.jpg"
@@ -16,6 +18,7 @@ const Manufacturing = () => {
         </div>
       </div>
     </div>
+   </div>
   );
 };
 

@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Tool = ({ service }) => {
   const {
+    _id,
     name,
     image,
     description,
@@ -9,6 +11,12 @@ const Tool = ({ service }) => {
     availableQuantity,
     price,
   } = service;
+  const navigate = useNavigate();
+
+  const handlePurchase = (id) => {
+    console.log(id);
+    navigate(`/purchase/${id}`);
+  };
   return (
     <div className="card lg:card-side bg-base-100 shadow-xl">
       <figure>
@@ -27,7 +35,12 @@ const Tool = ({ service }) => {
           <b>Price:</b> $<small>{price}</small>
         </p>
         <div className="card-actions justify-end">
-          <button className="btn bg-teal-500">Purchase</button>
+          <button
+            onClick={() => handlePurchase(_id)}
+            className="btn bg-teal-500"
+          >
+            Purchase
+          </button>
         </div>
       </div>
     </div>
