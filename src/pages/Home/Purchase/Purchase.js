@@ -21,7 +21,7 @@ const Purchase = () => {
   const handleQuantity = (event) => {
     const userAddedQuantity = event.target.value;
     if(userAddedQuantity < services[0]?.minOrderQuantity){
-      return quantityError = <p className="text-red-500">Please enter a quantity up to minimum order quantity: {services[0]?.minOrderQuantity}</p>
+      return quantityError = <p className="text-red-500">Please enter a quantity up to minimum order quantity: </p>
     }
     console.log(event.target.value);
     
@@ -35,7 +35,7 @@ const Purchase = () => {
     const orderQuantity = event.target.quantity.value;
     const number = event.target.number.value;
     const address = event.target.address.value;
-    const ordreSumary = {
+    const orderSumary = {
       name: orderName,
       image: orderimage,
       email: email,
@@ -53,19 +53,20 @@ const Purchase = () => {
         headers: {
           "content-type": "application/json",
         },
-        body: JSON.stringify(ordreSumary),
+        body: JSON.stringify(orderSumary),
       })
         .then((res) => res.json())
         .then((inserted) => {
           
           console.log(inserted);
           if (inserted) {
+            toast.success(`Proced Your Order for : ${services[0]?.name}`);
             event.target.reset();
           } else {
+            toast.error("Failed Your Order");
             event.target.reset();
           }
           
-          toast.error("Failed Your Order");
         });
     }
   };

@@ -20,7 +20,7 @@ const MyOrders = () => {
     <div className="">
       <h1 className="text-teal-800 text-3xl my-2 text-center">My Orders</h1>
       <div class="overflow-x-auto">
-        <table class="table table-compact w-full">
+        <table class="table table-compact w-full max-h-full">
           <thead>
             <tr>
               <th>Order Name</th>
@@ -35,6 +35,7 @@ const MyOrders = () => {
               <MyOrder 
               key={order._id} 
               order={order}
+              orders={orders}
               setOrders={setOrders}
               ></MyOrder>
             ))}

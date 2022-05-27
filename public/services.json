@@ -1,52 +1,26 @@
 [
-    
-    {
-     "name": "GSB 550 Impact Drill",
-     "image": "https://i.ibb.co/TWyYGcZ/tool1.jpg",
-     "description": "Powerful 550 watt motor and 13 mm keyed chuck auxiliary handle and depth stop Fully ball bearing mounted construction for a long lifetime",
-     "minOrderQuantity": 150,
-     "availableQuantity": 24000,
-     "price": 180
-    },
-    {
-     "name": "Heavy duty DH 26DC",
-     "image": "https://i.ibb.co/FKVk7TG/tool2.jpg",
-     "description": "Industrial GoodsIdeal Rotary Hammering Drill Machine (26mm)",
-     "minOrderQuantity": 150,
-     "availableQuantity": 24000,
-     "price": 180,
-    },
-    {
-     "name": "Youwe 168TV Drill",
-     "image": "https://i.ibb.co/CtT8h17/tool3.jpg",
-     "description": "China Heavy Duty Multi Functional 21V Power Tools Brushless Electric Cordless Rotary Hammer Drill Machine China 21V Cordless Rotary Hammer Lithium Cordless Professionaly Hammer",
-     "minOrderQuantity": 150,
-     "availableQuantity": 24000,
-     "price": 180,
-    },
-    {
-     "name": "MoglixHammer Drill",
-     "image": "https://i.ibb.co/ss2T8wJ/tool4.jpg",
-     "description": "MoglixHammer Drill Machines Buy Hammer Drills Online at Best Price in India",
-     "minOrderQuantity": 150,
-     "availableQuantity": 24000,
-     "price": 180,
-    },
-    {
-     "name": "Bosch 880 Watt SDS GBH 2-28 F",
-     "image": "https://i.ibb.co/GWfvhdz/tool5.jpg",
-     "description": "Rotary hammer drill functions some as a hammer drill but the features which differentiates it from hammer drill is it has 3 different modes such sa drill made",
-     "minOrderQuantity": 150,
-     "availableQuantity": 24000,
-     "price": 180,
-    },
-    {
-     "name": "Digital Craft DIVS 26 mm Reversible Rotary",
-     "image": "https://i.ibb.co/hKdxbFn/tool6.jpg",
-     "description": "Amazon in Digital Craft DIVS 26 mm Reversible Rotary Hammer Drill Machine 800 Watts with 3 Mode (Red)  Amazon in Industrial  Scientific",
-     "minOrderQuantity": 150,
-     "availableQuantity": 24000,
-     "price": 180,
-    }
-    
-  ]
+  {
+    "img": "https://i.ibb.co/HFH50XS/review1.jpg",
+    "name": "Akbor dorsl",
+    "feedback": "The best magnetic core drill machine in the market. They have the largest variety of machines to suit almost every drilling requirement for portable drill machines.",
+    "ratings": 6
+  },
+  {
+    "img": "https://i.ibb.co/F4g9c43/review2.jpg",
+    "name": "Jhon nitro",
+    "feedback": "The best magnetic core drill machine in the market. They have the largest variety of machines to suit almost every drilling requirement for portable drill machines.",
+    "ratings": 5.9
+  },
+  {
+    "img": "https://i.ibb.co/pPBGt1W/review3.jpg",
+    "name": "pekarotoy",
+    "feedback": "The best magnetic core drill machine in the market. They have the largest variety of machines to suit almost every drilling requirement for portable drill machines.",
+    "ratings": 5.8
+  },
+  {
+    "img": "https://i.ibb.co/BCkcTZ1/review4.jpg",
+    "name": "lonchobiko viki",
+    "feedback": "The best magnetic core drill machine in the market. They have the largest variety of machines to suit almost every drilling requirement for portable drill machines.",
+    "ratings": 6
+  }
+]

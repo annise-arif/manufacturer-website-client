@@ -1,37 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Review from "./Review";
 
 const Reviews = () => {
-  const reviews = [
-    {
-      _id:1,
-      img: "https://i.ibb.co/HFH50XS/review1.jpg",
-      name: "Akbor dorsl",
-      feedback: "The best magnetic core drill machine in the market. They have the largest variety of machines to suit almost every drilling requirement for portable drill machines.",
-      ratings: 6,
-    },
-    {
-      _id:2,
-      img: "https://i.ibb.co/F4g9c43/review2.jpg",
-      name: "Jhon nitro",
-      feedback: "The best magnetic core drill machine in the market. They have the largest variety of machines to suit almost every drilling requirement for portable drill machines.",
-      ratings: 5.9,
-    },
-    {
-      _id:3,
-      img: "https://i.ibb.co/pPBGt1W/review3.jpg",
-      name: "pekarotoy",
-      feedback: "The best magnetic core drill machine in the market. They have the largest variety of machines to suit almost every drilling requirement for portable drill machines.",
-      ratings: 5.8,
-    },
-    {
-      _id:4,
-      img: "https://i.ibb.co/BCkcTZ1/review4.jpg",
-      name: "lonchobiko viki",
-      feedback: "The best magnetic core drill machine in the market. They have the largest variety of machines to suit almost every drilling requirement for portable drill machines.",
-      ratings: 6,
-    }
-  ]
+  const [reviews, setReviews ] = useState([]);
+  useEffect(() =>{
+    fetch('http://localhost:5000/reviews')
+    .then(res=>res.json())
+    .then(data => setReviews(data))
+  }, []);
   return (
     <div className="mt-20">
       <h1 className="text-teal-600 text-2xl font-bold text-center">

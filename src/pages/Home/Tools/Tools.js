@@ -15,7 +15,7 @@ const Tools = () => {
         Tools
       </h1>
       <div className="lg:px-12 md:px-8 sm:px-6 inline-grid lg:grid-cols-3 md:grid-cols-2 gap-10 w-full mx-auto mt-8">
-        {services.map((service) => (
+        {services?.map((service) => (
           <Tool key={service._id} service={service}></Tool>
         ))}
       </div>
