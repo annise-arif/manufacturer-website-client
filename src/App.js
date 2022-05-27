@@ -14,6 +14,7 @@ import MyOrders from "./pages/Dashboard/MyOrders";
 import AddaReview from "./pages/Dashboard/AddaReview";
 import MyProfile from "./pages/Dashboard/MyProfile";
 import NotFound from "./pages/Shared/NotFound/NotFound";
+import Blogs from "./pages/Blogs/Blogs";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="home" element={<Home></Home>}></Route>
+        <Route path="blogs" element={<Blogs />}></Route>
         <Route path="dashboard" element={<Dashboard />}>
           <Route path="myorders" element={<MyOrders />}></Route>
           <Route path="addareview" element={<AddaReview />}></Route>

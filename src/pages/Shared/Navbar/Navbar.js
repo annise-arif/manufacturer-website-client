@@ -82,7 +82,7 @@ const Navbar = () => {
             {user && (
               <>
                 <li>
-                  <Link to="/home">About</Link>
+                  <Link to="/blogs">Blogs</Link>
                 </li>
                 <li>
                   <Link to="/dashboard">Dashboard</Link>

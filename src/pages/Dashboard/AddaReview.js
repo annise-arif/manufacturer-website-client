@@ -14,11 +14,13 @@ const AddaReview = () => {
   const handlereview = (event) => {
     event.preventDefault();
     
+    const img = event.target.img.value;
     const Name = event.target.name.value;
     const email = event.target.email.value;
     const feedback = event.target.feedback.value;
     const ratings = event.target.ratings.value;
     const orderSumary = {
+      img: img,
       name: Name,
       email: email,
       ratings: ratings,
@@ -56,6 +58,14 @@ const AddaReview = () => {
       </h1>
 
       <form onSubmit={handlereview}>
+        <br />
+        <input
+          type="text"
+          name="img"
+          placeholder="Your image link"
+          id=""
+          className="border-4 p-2 rounded-lg mb-4"
+        />
         <br />
         <input
           type="name"
