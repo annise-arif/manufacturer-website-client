@@ -13,6 +13,7 @@ import "react-toastify/dist/ReactToastify.css";
 import MyOrders from "./pages/Dashboard/MyOrders";
 import AddaReview from "./pages/Dashboard/AddaReview";
 import MyProfile from "./pages/Dashboard/MyProfile";
+import NotFound from "./pages/Shared/NotFound/NotFound";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         ></Route>
         <Route path="login" element={<Login />}></Route>
         <Route path="register" element={<Register />}></Route>
+        <Route path="/*" element={<NotFound />}></Route>
       </Routes>
       <Footer></Footer>
       <ToastContainer></ToastContainer>

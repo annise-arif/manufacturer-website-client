@@ -6,7 +6,7 @@ import MyOrder from "./MyOrder";
 const MyOrders = () => {
   const [user] = useAuthState(auth);
   const [orders, setOrders] = useState([]);
-  console.log(orders);
+  console.log();
 
   useEffect(() => {
     const url = `http://localhost:5000/myorders/${user?.email}`;
@@ -14,6 +14,8 @@ const MyOrders = () => {
       .then((res) => res.json())
       .then((ordersData) => setOrders(ordersData));
   }, [user]);
+
+  
   return (
     <div className="">
       <h1 className="text-teal-800 text-3xl my-2 text-center">My Orders</h1>
@@ -30,7 +32,11 @@ const MyOrders = () => {
           </thead>
           <tbody>
             {orders.map((order) => (
-              <MyOrder key={order._id} order={order}></MyOrder>
+              <MyOrder 
+              key={order._id} 
+              order={order}
+              setOrders={setOrders}
+              ></MyOrder>
             ))}
           </tbody>
           <tfoot>
