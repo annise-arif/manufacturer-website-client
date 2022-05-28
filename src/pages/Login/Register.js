@@ -11,6 +11,13 @@ const Register = () => {
   let from = location?.state?.from?.pathname || "/";
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+
+    // const [users, setUsers] = useState(user);
+    // const {email} = users?.emil;
+    // console.log(email)
+
+ 
+
   let errorElement;
 
   if (loading) {
@@ -29,9 +36,19 @@ const Register = () => {
     event.preventDefault();
     const email = event.target.email.value;
     const password = event.target.password.value;
-    console.log(email, password);
+    const usersInfo = {email: email};
     if (email && password) {
       createUserWithEmailAndPassword(email, password);
+
+      fetch(`http://localhost:5000/user/${email}`, {
+        method: 'PUT',
+        headers: {
+          "content-type": "application/json"
+        },
+        body: JSON.stringify(usersInfo),
+      })
+      .then(res=>res.json())
+      .then(data => console.log(data));
     }
   };
   const navigateRegister = () => {

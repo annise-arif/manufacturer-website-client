@@ -16,6 +16,7 @@ import MyProfile from "./pages/Dashboard/MyProfile";
 import NotFound from "./pages/Shared/NotFound/NotFound";
 import Blogs from "./pages/Blogs/Blogs";
 import MyPortfolio from "./pages/MyPortfolio/MyPortfolio";
+import AllUsers from "./pages/Dashboard/AllUsers";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="myorders" element={<MyOrders />}></Route>
           <Route path="addareview" element={<AddaReview />}></Route>
           <Route path="myprofile" element={<MyProfile />}></Route>
+          <Route path="allusers" element={<AllUsers />}></Route>
         </Route>
         <Route
           path="/purchase/:id"
