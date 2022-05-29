@@ -9,18 +9,17 @@ const MyOrders = () => {
   console.log();
 
   useEffect(() => {
-    const url = `http://localhost:5000/myorders/${user?.email}`;
+    const url = `https://aqueous-fortress-84806.herokuapp.com/myorders/${user?.email}`;
     fetch(url)
       .then((res) => res.json())
       .then((ordersData) => setOrders(ordersData));
   }, [user]);
 
-  
   return (
     <div className="">
       <h1 className="text-teal-800 text-3xl my-2 text-center">My Orders</h1>
-      <div class="overflow-x-auto">
-        <table class="table table-compact w-full max-h-full">
+      <div className="overflow-x-auto">
+        <table className="table table-compact w-full max-h-full">
           <thead>
             <tr>
               <th>Order Name</th>
@@ -28,15 +27,17 @@ const MyOrders = () => {
               <th>Email</th>
               <th>Phone</th>
               <th>address</th>
+              <th>Cancel</th>
+              <th>Pay</th>
             </tr>
           </thead>
           <tbody>
             {orders.map((order) => (
-              <MyOrder 
-              key={order._id} 
-              order={order}
-              orders={orders}
-              setOrders={setOrders}
+              <MyOrder
+                key={order._id}
+                order={order}
+                orders={orders}
+                setOrders={setOrders}
               ></MyOrder>
             ))}
           </tbody>
@@ -47,6 +48,8 @@ const MyOrders = () => {
               <th>Email</th>
               <th>Phone</th>
               <th>address</th>
+              <th>Cancel</th>
+              <th>Pay</th>
             </tr>
           </tfoot>
         </table>

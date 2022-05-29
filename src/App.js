@@ -17,6 +17,10 @@ import NotFound from "./pages/Shared/NotFound/NotFound";
 import Blogs from "./pages/Blogs/Blogs";
 import MyPortfolio from "./pages/MyPortfolio/MyPortfolio";
 import AllUsers from "./pages/Dashboard/AllUsers";
+import ManageAllOrders from "./pages/Dashboard/ManageAllOrders";
+import AddAProduct from "./pages/Dashboard/AddAProduct";
+import MakeAdmin from "./pages/Dashboard/MakeAdmin";
+import ManageProducts from "./pages/Dashboard/ManageProducts";
 
 function App() {
   return (
@@ -27,10 +31,14 @@ function App() {
         <Route path="home" element={<Home></Home>}></Route>
         <Route path="blogs" element={<Blogs />}></Route>
         <Route path="myportfolio" element={<MyPortfolio />}></Route>
-        <Route path="dashboard" element={<Dashboard />}>
+        <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>}>
           <Route path="myorders" element={<MyOrders />}></Route>
           <Route path="addareview" element={<AddaReview />}></Route>
           <Route path="myprofile" element={<MyProfile />}></Route>
+          <Route path="manageallorders" element={<ManageAllOrders />}></Route>
+          <Route path="addaproduct" element={<AddAProduct />}></Route>
+          <Route path="makeadmin" element={<MakeAdmin />}></Route>
+          <Route path="manageproducts" element={<ManageProducts />}></Route>
           <Route path="allusers" element={<AllUsers />}></Route>
         </Route>
         <Route

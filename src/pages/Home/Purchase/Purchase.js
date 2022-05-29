@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import auth from "../../../Firebase.init";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
+import auth from "../../../Firebase.init";
 
 const Purchase = () => {
   const [user, loading, error] = useAuthState(auth);
@@ -10,25 +10,28 @@ const Purchase = () => {
   const [services, setServices] = useState([]);
   console.log();
   useEffect(() => {
-    fetch(`http://localhost:5000/services/${id}`)
+    fetch(`https://aqueous-fortress-84806.herokuapp.com/services/${id}`)
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, [id]);
 
   let quantityError;
-  console.log(quantityError)
+  console.log(quantityError);
 
   const handleQuantity = (event) => {
     const userAddedQuantity = event.target.value;
-    if(userAddedQuantity < services[0]?.minOrderQuantity){
-      return quantityError = <p className="text-red-500">Please enter a quantity up to minimum order quantity: </p>
+    if (userAddedQuantity < services[0]?.minOrderQuantity) {
+      return (quantityError = (
+        <p className="text-red-500">
+          Please enter a quantity up to minimum order quantity:{" "}
+        </p>
+      ));
     }
     console.log(event.target.value);
-    
   };
   const handleProceedOrder = (event) => {
     event.preventDefault();
-    
+
     const orderName = services[0]?.name;
     const orderimage = services[0]?.image;
     const email = event.target.email.value;
@@ -48,7 +51,7 @@ const Purchase = () => {
       orderQuantity > services[0]?.minOrderQuantity &&
       orderQuantity < services[0]?.availableQuantity
     ) {
-      fetch("http://localhost:5000/order", {
+      fetch("https://aqueous-fortress-84806.herokuapp.com/order", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -57,7 +60,6 @@ const Purchase = () => {
       })
         .then((res) => res.json())
         .then((inserted) => {
-          
           console.log(inserted);
           if (inserted) {
             toast.success(`Proced Your Order for : ${services[0]?.name}`);
@@ -66,18 +68,17 @@ const Purchase = () => {
             toast.error("Failed Your Order");
             event.target.reset();
           }
-          
         });
     }
   };
   return (
     <div className="card w-96 mb-16 bg-base-100 shadow-xl p-2 pt-8 text-center align-center mt-12 mx-auto">
-      <h1 class="font-bold text-teal-600 text-xl">
+      <h1 className="font-bold text-teal-600 text-xl">
         Order minimum Quantity: {services[0]?.minOrderQuantity}
       </h1>
 
-      <figure class="px-10 pt-10">
-        <img src={services[0]?.image} alt="img" class="rounded-xl" />
+      <figure className="px-10 pt-10">
+        <img src={services[0]?.image} alt="img" className="rounded-xl" />
       </figure>
 
       <form onSubmit={handleProceedOrder}>
@@ -110,7 +111,7 @@ const Purchase = () => {
           id=""
           className="border-4 p-2 mt- rounded-lg"
         />
-          {quantityError}
+        {quantityError}
         <br />
 
         <input

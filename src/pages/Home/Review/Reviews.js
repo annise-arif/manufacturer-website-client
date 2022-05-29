@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import Review from "./Review";
 
 const Reviews = () => {
-  const [reviews, setReviews ] = useState([]);
-  useEffect(() =>{
-    fetch('http://localhost:5000/reviews')
-    .then(res=>res.json())
-    .then(data => setReviews(data))
+  const [reviews, setReviews] = useState([]);
+  useEffect(() => {
+    fetch("https://aqueous-fortress-84806.herokuapp.com/reviews")
+      .then((res) => res.json())
+      .then((data) => setReviews(data));
   }, []);
   return (
     <div className="mt-20">
@@ -15,12 +15,9 @@ const Reviews = () => {
       </h1>
 
       <div className="lg:px-12 md:px-8 sm:px-6 inline-grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 w-full mx-auto mt-8">
-        {
-          reviews.map(review => <Review
-          key={review._id}
-          review={review}
-          ></Review>)
-        }
+        {reviews.map((review) => (
+          <Review key={review._id} review={review}></Review>
+        ))}
       </div>
     </div>
   );

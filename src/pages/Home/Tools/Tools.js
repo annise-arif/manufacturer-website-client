@@ -4,10 +4,10 @@ import Tool from "./Tool";
 const Tools = () => {
   const [services, setServices] = useState([]);
 
-  useEffect(() =>{
-    fetch('http://localhost:5000/services')
-    .then(res=>res.json())
-    .then(data => setServices(data))
+  useEffect(() => {
+    fetch("https://aqueous-fortress-84806.herokuapp.com/services")
+      .then((res) => res.json())
+      .then((data) => setServices(data));
   }, []);
   return (
     <div>
