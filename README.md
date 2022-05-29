@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+## car warehouse React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Final Assignment Project
 
-## Available Scripts
+# Live Web Site Link
 
-In the project directory, you can run:
+Live Site: https://digital-hammer-drill-station.web.app/
+ 
+# Server Site Code Link
 
-### `npm start`
+Server Site Code: https://github.com/programming-hero-web-course1/manufacturer-website-server-side-annise-arif 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Description
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+A hammer drill, also known as a percussion drill or impact drill, is a power tool used chiefly for drilling in hard materials.[1][2] It is a type of rotary drill with an impact mechanism that generates a hammering motion. The percussive mechanism provides a rapid succession of short hammer thrusts to pulverize the material to be bored, so as to provide quicker drilling with less effort. If a hammer drill's impact mechanism can be switched off, the tool can be used like a conventional drill to also perform tasks such as screwdriving.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Feature added
 
-### `npm run build`
+* google firebase authentication with email and social
+* react firebase hooks
+* tailwind css
+* daisyUi of tailwind component
+* react router
+* react query
+* fontAwesome icon
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Project testing admin roles email and password
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Email : www@gmail.com
+Pass : 111111
