@@ -20,7 +20,7 @@ A hammer drill, also known as a percussion drill or impact drill, is a power too
 * google firebase authentication with email and social
 * react firebase hooks
 * tailwind css
-* daisyUi of tailwind component
+* daisyUi of tailwind components
 * react router
 * react query
 * fontAwesome icon
