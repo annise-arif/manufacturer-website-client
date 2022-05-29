@@ -4,47 +4,47 @@ import { toast } from "react-toastify";
 import auth from "../../Firebase.init";
 
 const AddAProduct = () => {
-    const [user] = useAuthState(auth);
-    const addProduct = (event) => {
-        event.preventDefault();
+  const [user] = useAuthState(auth);
+  const addProduct = (event) => {
+    event.preventDefault();
 
-        const name = event.target.name.value;
-        const img = event.target.img.value;
-        const price = event.target.price.value;
-        const description = event.target.description.value;
-        const minOrderQuantity = event.target.minQuan.value;
-        const availableQuantity = event.target.availableQuan.value;
-        const email = user.email;
-        const orderSumary = {
-          email: email,
-          name: name,
-          image: img,
-          price: price,
-          description: description,
-          minOrderQuantity: minOrderQuantity,
-          availableQuantity: availableQuantity,
-        };
-        console.log(orderSumary);
-    
-        fetch("http://localhost:5000/addaproduct", {
-          method: "POST",
-          headers: {
-            "content-type": "application/json",
-          },
-          body: JSON.stringify(orderSumary),
-        })
-          .then((res) => res.json())
-          .then((inserted) => {
-            console.log(inserted);
-            if (inserted) {
-              toast.success(`added success your Product`);
-              event.target.reset();
-            } else {
-              toast.error("Failed Your Product");
-              event.target.reset();
-            }
-          });
-      };
+    const name = event.target.name.value;
+    const img = event.target.img.value;
+    const price = event.target.price.value;
+    const description = event.target.description.value;
+    const minOrderQuantity = event.target.minQuan.value;
+    const availableQuantity = event.target.availableQuan.value;
+    const email = user.email;
+    const orderSumary = {
+      email: email,
+      name: name,
+      image: img,
+      price: price,
+      description: description,
+      minOrderQuantity: minOrderQuantity,
+      availableQuantity: availableQuantity,
+    };
+    console.log(orderSumary);
+
+    fetch("https://aqueous-fortress-84806.herokuapp.com/addaproduct", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(orderSumary),
+    })
+      .then((res) => res.json())
+      .then((inserted) => {
+        console.log(inserted);
+        if (inserted) {
+          toast.success(`added success your Product`);
+          event.target.reset();
+        } else {
+          toast.error("Failed Your Product");
+          event.target.reset();
+        }
+      });
+  };
   return (
     <div className="card w-1/3 mb-16 bg-base-100 shadow-xl p-6 pt-8 text-center align-center mt-12 mx-auto">
       <h3 className="text-teal-400 text-2xl font-bold p-4 text-center">

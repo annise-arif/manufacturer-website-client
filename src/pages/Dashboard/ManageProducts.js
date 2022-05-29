@@ -6,14 +6,14 @@ const ManageProducts = () => {
   const [services, setServices] = useState([]);
   const { name } = services;
   useEffect(() => {
-    fetch("http://localhost:5000/manageproducts")
+    fetch("https://aqueous-fortress-84806.herokuapp.com/manageproducts")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
 
   const handleDelete = (_id) => {
-      window.confirm("Are you sure to delete this service");
-    fetch(`http://localhost:5000/manageproduct/${_id}`, {
+    window.confirm("Are you sure to delete this service");
+    fetch(`https://aqueous-fortress-84806.herokuapp.com/manageproduct/${_id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -26,7 +26,9 @@ const ManageProducts = () => {
   };
   return (
     <div>
-      <h2 className="text-teal-400 text-2xl font-bold p-4 text-center">Manage Products: {services.length}</h2>
+      <h2 className="text-teal-400 text-2xl font-bold p-4 text-center">
+        Manage Products: {services.length}
+      </h2>
       <div class="overflow-x-auto">
         <table class="table w-full">
           <thead>
