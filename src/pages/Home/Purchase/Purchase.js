@@ -48,8 +48,8 @@ const Purchase = () => {
     };
 
     if (
-      orderQuantity > services[0]?.minOrderQuantity &&
-      orderQuantity < services[0]?.availableQuantity
+      orderQuantity >= services[0]?.minOrderQuantity &&
+      orderQuantity <= services[0]?.availableQuantity
     ) {
       fetch("https://aqueous-fortress-84806.herokuapp.com/order", {
         method: "POST",
@@ -69,6 +69,9 @@ const Purchase = () => {
             event.target.reset();
           }
         });
+    }
+    else{
+      toast.error("Please Enter a valid quantity");
     }
   };
   return (
