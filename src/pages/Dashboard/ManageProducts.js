@@ -11,26 +11,33 @@ const ManageProducts = () => {
       .then((data) => setServices(data));
   }, []);
 
-  const handleDelete = (_id) => {
-    window.confirm("Are you sure to delete this service");
-    fetch(`https://aqueous-fortress-84806.herokuapp.com/manageproduct/${_id}`, {
-      method: "DELETE",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        if (data.deletedCount) {
-          toast.success(`Product: ${name} is deleted.`);
+  const handleDelete = (id) => {
+    const proceed = window.confirm("Are you sure to delete this service");
+    if (proceed) {
+      fetch(
+        `https://aqueous-fortress-84806.herokuapp.com/manageproduct/${id}`,
+        {
+          method: "DELETE",
         }
-      });
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          if (data.deletedCount) {
+            const remaining = services.filter((s) => s._id !== id);
+            setServices(remaining);
+            toast.success(`Product: ${name} is deleted.`);
+          }
+        });
+    }
   };
   return (
     <div>
       <h2 className="text-teal-400 text-2xl font-bold p-4 text-center">
         Manage Products: {services.length}
       </h2>
-      <div class="overflow-x-auto">
-        <table class="table w-full">
+      <div className="overflow-x-auto">
+        <table className="table w-full">
           <thead>
             <tr>
               <th></th>

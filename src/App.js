@@ -1,26 +1,25 @@
 import { Route, Routes } from "react-router-dom";
-import "./App.css";
-import Home from "./pages/Home/Home";
-import Navbar from "../src/pages/Shared/Navbar/Navbar.js";
-import Footer from "../src/pages/Shared/Footer/Footer.js";
-import Register from "./pages/Login/Register";
-import Login from "./pages/Login/Login";
-import Dashboard from "./pages/Dashboard/Dashboard";
-import Purchase from "./pages/Home/Purchase/Purchase";
-import RequireAuth from "./pages/RequireAuth/RequireAuth";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import MyOrders from "./pages/Dashboard/MyOrders";
-import AddaReview from "./pages/Dashboard/AddaReview";
-import MyProfile from "./pages/Dashboard/MyProfile";
-import NotFound from "./pages/Shared/NotFound/NotFound";
+import Footer from "../src/pages/Shared/Footer/Footer.js";
+import Navbar from "../src/pages/Shared/Navbar/Navbar.js";
+import "./App.css";
 import Blogs from "./pages/Blogs/Blogs";
-import MyPortfolio from "./pages/MyPortfolio/MyPortfolio";
-import AllUsers from "./pages/Dashboard/AllUsers";
-import ManageAllOrders from "./pages/Dashboard/ManageAllOrders";
 import AddAProduct from "./pages/Dashboard/AddAProduct";
+import AddaReview from "./pages/Dashboard/AddaReview";
+import Dashboard from "./pages/Dashboard/Dashboard";
 import MakeAdmin from "./pages/Dashboard/MakeAdmin";
+import ManageAllOrders from "./pages/Dashboard/ManageAllOrders";
 import ManageProducts from "./pages/Dashboard/ManageProducts";
+import MyOrders from "./pages/Dashboard/MyOrders";
+import MyProfile from "./pages/Dashboard/MyProfile";
+import Home from "./pages/Home/Home";
+import Purchase from "./pages/Home/Purchase/Purchase";
+import Login from "./pages/Login/Login";
+import Register from "./pages/Login/Register";
+import MyPortfolio from "./pages/MyPortfolio/MyPortfolio";
+import RequireAuth from "./pages/RequireAuth/RequireAuth";
+import NotFound from "./pages/Shared/NotFound/NotFound";
 
 function App() {
   return (
@@ -31,7 +30,14 @@ function App() {
         <Route path="home" element={<Home></Home>}></Route>
         <Route path="blogs" element={<Blogs />}></Route>
         <Route path="myportfolio" element={<MyPortfolio />}></Route>
-        <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>}>
+        <Route
+          path="dashboard"
+          element={
+            <RequireAuth>
+              <Dashboard />
+            </RequireAuth>
+          }
+        >
           <Route path="myorders" element={<MyOrders />}></Route>
           <Route path="addareview" element={<AddaReview />}></Route>
           <Route path="myprofile" element={<MyProfile />}></Route>
@@ -39,7 +45,6 @@ function App() {
           <Route path="addaproduct" element={<AddAProduct />}></Route>
           <Route path="makeadmin" element={<MakeAdmin />}></Route>
           <Route path="manageproducts" element={<ManageProducts />}></Route>
-          <Route path="allusers" element={<AllUsers />}></Route>
         </Route>
         <Route
           path="/purchase/:id"
