@@ -8,7 +8,7 @@ const MakeAdmin = () => {
     fetch("https://aqueous-fortress-84806.herokuapp.com/allusers")
       .then((res) => res.json())
       .then((data) => setAllusers(data));
-  }, []);
+  }, [allusers]);
 
   const deleteUser = (id) =>{
     const proceed = window.confirm(
