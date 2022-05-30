@@ -75,43 +75,41 @@ const MyPortfolio = () => {
             <img className="rounded-lg" src={me} alt="img" />
           </div>
           <div className="aboutme-desc col-lg-6 cal-sm-12">
-            <p>
+            <p className="text-teal-700 font-bold mt-2 text-center">
               I like to call myself ``a passionate computer science learner &
-              Web designer".
+              Web Developer.
             </p>
             <p>
-              I made lot of videos on different subjects. My first priority is
-              making the subject more interesting and give you a clear
-              understanding so you can feel it and don't get bore.
+            I made a lot of projects on different subjects. My first priority is making the Project more interesting and giving user experience understanding so you can feel it and don't get bore.
             </p>
 
+            <hr className="aboutme-hr my-3" />
+            <p><b>Name: </b> Anis hossain arif</p>
             <hr className="aboutme-hr" />
-            <p>Name: Anis hossain arif</p>
-            <hr className="aboutme-hr" />
-            <p>Address: Dhaka, Sreepur, Gazipur</p>
+            <p><b>Address: </b> Dhaka, Sreepur, Gazipur</p>
             <hr className="aboutme-hr" />
             <p>
-              Email:{" "}
-              <a href="mailto:arifhasan.neon@gmail.com">
+              <b>Email: </b>{" "}
+              <a href="mailto:arifhasan.neon@gmail.com" className="text-blue-400">
                 arifhasan.neon@gmail.com
               </a>
             </p>
             <hr className="aboutme-hr" />
             <p>
-              Phone: <a href="tel:+8801861449772">+8801861449772</a>
+              <b>Phone: </b> <a href="tel:+8801861449772">+8801303477672</a>
             </p>
             <hr className="aboutme-hr" />
             <p>
-              Page:{" "}
-              <a href="https//www.anis.com" target="blank">
+              <b>Page: </b>
+              <a className="text-blue-400" href="https://www.facebook.com/Annisecom-2443686335648691/" target="blank">
                 https//www.anis.com
               </a>
             </p>
             <hr className="aboutme-hr" />
 
             <p>
-              <a href="#" target="blank" download="">
-                <button className="cv-button">Download CV</button>
+              <a href="https://docs.google.com/document/d/12E_CVD3e71gwSnd8xCRDfNs36z9yDHABvV7l8IdiOTE/edit" target="blank" download="">
+                <button className="cv-button mt-2 btn bg-teal-300 border-0 btn-sm">Download CV</button>
               </a>
             </p>
             <ol>
