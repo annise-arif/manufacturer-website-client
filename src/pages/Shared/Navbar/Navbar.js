@@ -59,14 +59,11 @@ const Navbar = () => {
             </ul>
           </div>
           <a className="btn btn-ghost text-teal-600 normal-case lg:text-3xl md:text-2xl font-bold">
-            Hammer Drill M.F.C.. <span className="text-white"> (L.T.D)</span>
+           <Link to="/home">Hammer Drill M.F.C..</Link>  <span className="text-white"> (L.T.D)</span>
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0">
-            <li>
-              <Link to="/"></Link>
-            </li>
             <li>
               <Link to="/home">Home</Link>
             </li>
