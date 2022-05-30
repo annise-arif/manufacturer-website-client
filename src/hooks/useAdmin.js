@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 
 const useAdmin = (user) => {
+  const email = user?.email;
   const [admin, setAdmin] = useState(false);
   useEffect(() => {
-    const email = user?.email;
+    
     if (email) {
       fetch(`https://aqueous-fortress-84806.herokuapp.com/admin/${email}`, {
         method: "GET",

@@ -7,86 +7,58 @@ const MyPortfolio = () => {
     <div className="lg:flex my-20">
       <div className="max-w-md card lg:w-96 sm:w-full bg-base-100 shadow-xl p-6 mx-auto">
         <h1 className="text-3xl font-bold text-teal-700">
-          EDUCATION AND TRAINING
+        EDUCATION AND INTRODUCING MYSELF
         </h1>
         <ol>
           <li>
-            <strong>Student of Science technology</strong>
+            <strong>Student of School</strong>
             <br />
-            01/06/2016-01/08/2017 <br />
-            Sreepur Pilot High School <br />
-            Dhaka, Sreepur, Gazipur ( Bangladesh) <br />
-            <a className="" href="https://youtu.be/JjQYJFyEckE">
-              Subscribe my channel
+            01/02/2009 _ 12/30/2015-16 <br />
+            <b>School:</b> Sreepur Pilot High School <br />
+            <b>Address:</b> Dhaka, Sreepur, Gazipur ( Bangladesh) <br />
+            <a className=" text-blue-400" target="_blank" href="https://www.youtube.com/channel/UCAVndfkblprqNVhoKvr4Wgw">
+              Subscribe my youTube channel
             </a>
           </li>
-          <hr className="" />
+          <hr className="my-3" />
           <li>
-            <strong>Student of Electronics Engineering & Web Designing</strong>{" "}
+            <strong>Student of Diploma In Electronics Engineering</strong>{" "}
             <br />
-            10/11/2017-03/12/2018 <br />
-            Model institute of science & technology. Gazipur (MIST
+            02/24/2017 _ 12/30/2021 <br />
+           <b>College:</b> Model institute of science & technology. Gazipur (MIST)
             <br />
-            Gazipur, shibbari, DUET, ( Bangladesh) <br />
+           <b>Address:</b> Gazipur, shibbari, DUET, (1700)  ( Bangladesh) <br />
+           <b>WebSite:</b> <a className=" text-blue-400" target="_blank" href="https://mistte.org/">
+              Model Institute Of....
+            </a>
           </li>
-          <hr />
+          <hr className="my-3"/>
           <li>
-            <strong>Student of Science technology</strong> <br />
-            01/06/2016-01/08/2017 <br />
-            Sreepur Pilot High School <br />
-            Dhaka, Sreepur, Gazipur ( Bangladesh) <br />
+            <strong>Studying Web Development</strong> <br />
+            01/06/2018 _ 05/30/2022... <br />
+            I was learning and following W3schools YouTube and I google search <br />
+            <b>Address</b> Dhaka, Sreepur, Gazipur ( Bangladesh) <br />
           </li>
-          <hr />
+          <hr className="my-3"/>
           <li>
-            <strong> Web Designer & Developer</strong> <br />
-            19/05/2018-03/02/2012 <br />
-            Model institute of science & technology. Gazipur (MIST
+            <strong> Complete Web Development Course with Jhankar Mahbub brother</strong> <br />
+            12/30/2011 _ 05/30/2022... <br />
+            Complete Web Development Course with Jhankar Mahbub 
             <br />
-            <a className="text-teal-300" href="https://youtu.be/JjQYJFyEckE">
-              Subscribe my channel
-            </a>{" "}
+            <b>Address:</b> Level-4, 34, Awal Centre, Banani, Dhaka
+            <br />
+            <b>WebSite: </b> <a className="text-blue-400" href="https://youtu.be/JjQYJFyEckE">
+               Complete Web Dev..
+            </a>
+            <br />
             <br />
           </li>
-
           <li className="mt-8">
-            Live Project-1:
-            <a
-              target="_blank"
-              href="https://jade-lolly-f84cb6.netlify.app/"
-              className="text-teal-300"
-            >
-              {" "}
-              https://jade-lolly
-            </a>
-          </li>
-          <li className="mt-8">
-            Live Project-2:
-            <a
-              target="_blank"
-              href="https://zesty-kulfi-cd8e9c.netlify.app/"
-              className="text-teal-300"
-            >
-              {" "}
-              https://zesty-kulfi
-            </a>
-          </li>
-          <li className="mt-8">
-            Live Project-3:
-            <a
-              target="_blank"
-              href="https://mystifying-nightingale-6f858c.netlify.app/"
-              className="text-teal-300"
-            >
-              {" "}
-              https://mystifying
-            </a>
-          </li>
-          <li className="mt-8">
-            Live Project-4:
+            <b className="text-teal-900">My Own Live Project-1:</b>
             <a
               target="_blank"
               href="https://transcendent-parfait-1e0274.netlify.app/"
-              className="text-teal-300"
+              className="text-teal-400"
             >
               {" "}
               https://transcendent
@@ -144,27 +116,51 @@ const MyPortfolio = () => {
             </p>
             <ol>
               <li className="mt-8">
-                Live Project-5:
+              <b className="text-teal-900">My Own Live Project-2:</b>
                 <a
                   target="_blank"
                   href="https://suspicious-davinci-d7d641.netlify.app/"
-                  className="text-teal-300"
+                  className="text-teal-400"
                 >
                   {" "}
                   https://suspicious
                 </a>
               </li>
               <li className="mt-8">
-                Live Project-6:
+              <b className="text-teal-900">My Own Live Project-3:</b>
                 <a
                   target="_blank"
                   href="https://elastic-perlman-b7e6a4.netlify.app/"
-                  className="text-teal-300"
+                  className="text-teal-400"
                 >
                   {" "}
                   https://elastic
                 </a>
               </li>
+
+              <li className="mt-8">
+              <b className="text-teal-900">My Own Live Project-4:</b>
+            <a
+              target="_blank"
+              href="https://zesty-kulfi-cd8e9c.netlify.app/"
+              className="text-teal-400"
+            >
+              {" "}
+              https://zesty-kulfi
+            </a>
+          </li>
+          <li className="mt-8">
+          <b className="text-teal-900">My Own Live Project-5:</b>
+            <a
+              target="_blank"
+              href="https://warehouse-of-car.web.app/"
+              className="text-teal-300"
+            >
+              {" "}
+              https://mystifying
+            </a>
+          </li>
+          
             </ol>
           </div>
         </div>
