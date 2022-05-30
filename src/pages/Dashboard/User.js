@@ -1,7 +1,7 @@
 import React from "react";
 import { toast } from "react-toastify";
 
-const User = ({ user }) => {
+const User = ({ user, allusers, setAllusers, deleteUser }) => {
   const { email, _id, role} = user;
 
   const makeAdmin = () => {
@@ -17,6 +17,8 @@ const User = ({ user }) => {
       .then((data) => {
         console.log(data);
         if (data.matchedCount > 0) {
+          const remaining = allusers.filter(u => u.email !== email);
+          setAllusers(remaining);
           toast.success(`Successfully Made An Admin`);
         }
       });
@@ -33,7 +35,7 @@ const User = ({ user }) => {
         {role === 'admin' && <b>Admin</b>}
       </td>
       <td>
-        {role !== 'admin' && <button className="btn btn-xs bg-red-400">Remove user</button>}
+        {role !== 'admin' && <button onClick={() =>deleteUser(_id)} className="btn btn-xs bg-red-400">Remove user</button>}
       </td>
     </tr>
   );

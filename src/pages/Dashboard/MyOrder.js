@@ -11,6 +11,9 @@ const MyOrder = ({ order, setOrders, orders }) => {
       const url = `https://aqueous-fortress-84806.herokuapp.com/myorders/${id}`;
       fetch(url, {
         method: "DELETE",
+        headers: {
+          'content-type': 'application/json'
+        }
       })
         .then((res) => res.json())
         .then((data) => {

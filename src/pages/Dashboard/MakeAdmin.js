@@ -10,6 +10,27 @@ const MakeAdmin = () => {
       .then((data) => setAllusers(data));
   }, []);
 
+  const deleteUser = (id) =>{
+    const proceed = window.confirm(
+      `Are You Sure to Cancel this Order`
+    );
+    if (proceed) {
+      const url = `https://aqueous-fortress-84806.herokuapp.com/removeuser/${id}`;
+      fetch(url, {
+        method: "DELETE",
+        headers: {
+          'content-type': 'application/json'
+        }
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          const remaining = allusers.filter((u) => u._id !== id);
+          setAllusers(remaining);
+        });
+    }
+  }
+
   return (
     <div>
       <h1 className="text-teal-500 font-bold text-center py-8">
@@ -29,7 +50,13 @@ const MakeAdmin = () => {
           </thead>
           <tbody>
             {allusers.map((user) => (
-              <User key={user._id} user={user}></User>
+              <User 
+              key={user._id} 
+              user={user} 
+              allusers={allusers} 
+              setAllusers={setAllusers}
+              deleteUser={deleteUser}
+              ></User>
             ))}
           </tbody>
         </table>
