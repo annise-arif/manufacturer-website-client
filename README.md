@@ -1,4 +1,4 @@
-## car warehouse React App
+## digital-hammer-drill-station
 
 Final Assignment Project
 
